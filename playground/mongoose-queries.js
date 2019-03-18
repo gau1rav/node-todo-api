@@ -1,5 +1,4 @@
-const {ObjectID} = require('mongodb')
-;
+const {ObjectID} = require('mongodb');
 const {mongoose} =  require('./../server/db/mongoose');
 const {Todo} = require('./../server/models/todo');
 const {USer} = require('./../server.models/user');
@@ -23,7 +22,7 @@ Todo.findOne({
   console.log('Todo',todo);
 });
 
-Todo.findByID(id).then((todo)=> {
+Todo.findById(id).then((todo)=> {
   if(!todo) {
     return console.log('Cannot find ID');
   }
